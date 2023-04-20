@@ -1,0 +1,12 @@
+﻿/*Changes the bootstrap font, and creates padding around the whole website*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+
+}
+
+/*Changes the position of the input boxes so they are more uniform*/
+label {
+    display: inline-block;
+    width: 150px;
+}
