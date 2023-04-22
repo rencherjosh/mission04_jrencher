@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <!-- Title of Website and Assignment -->
+    <title>@ViewData["Title"]</title>
+    <!-- Added Icon Here-->
+    <link rel="icon" type="img/x-icon" href="img/icons8-elephant-16.png" />
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- My CSS-->
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="gradeCalculator">Grade Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Bringing in other js files and bootstrap -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jquery/jquery-3.6.4.min.js"></script>
+
+</body>
+</html>

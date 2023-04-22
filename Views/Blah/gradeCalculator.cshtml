@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model gradeCalculator;
+
+<!-- Grade Calculator -->
+<div>
+    <h3>Calculate Your IS 413 Grade</h3>
+    <p>Enter your grade percentage for each category (0 to 100).</p>
+    <form method="post">
+        <!-- Each box on the form has a label and a input. The label tells the user what should go in each box. The input collects the user input and uses the id to use it in our js file. -->
+        <div>
+            <label>Assignments:</label>
+            <input type="number" id="assignments" asp-for="assignments" min="0" max="100" /><br />
+        </div>
+        <div>
+            <label>Group Projects:</label>
+            <input type="number" id="groupProjects" asp-for="groupProjects" min="0" max="100" /><br />
+        </div>
+        <div>
+            <label>Quizzes:</label>
+            <input type="number" id="quizzes" asp-for="quizzes" min="0" max="100" /><br />
+        </div>
+        <div>
+            <label>Midterm Exam:</label>
+            <input type="number" id="midtermExam" asp-for="midtermExam" min="0" max="100" /><br />
+        </div>
+        <div>
+            <label>Final Exam:</label>
+            <input type="number" id="finalExam" asp-for="finalExam" min="0" max="100" /><br />
+        </div>
+        <div>
+            <label>Intex:</label>
+            <input type="number" id="intex" asp-for="intex" min="0" max="100" /><br />
+        </div>
+
+        <!-- Button that starts the calculation -->
+        <input id="calculate" type="submit" value="Calculate" />
+
+        <!-- This is where the calculated grade and letter grade are entered into the form. -->
+        <div>
+            <label for="total">Grade:</label>
+            <span id="total" asp-validation-for="total"></span>
+        </div>
+        <div>
+            <label for="letterGrade">Letter Grade:</label>
+            <span type="number" id="letterGrade" asp-validation-for="letterGrade"></span>
+        </div>
+        <div asp-validation-summary="All"></div>
+    </form>
+</div>
+
+<script src="js/calcGrade.js"></script>
